@@ -278,11 +278,20 @@
 	document.getElementById("confirmar").addEventListener("click", confirmar);
 	function confirmar(){
 		var name = document.getElementById("name").value
+		var telefono = document.getElementById("telefono").value
 		var number = document.getElementById("numInv").innerHTML;
 		number = number.substring(30,32);
 		// number = number.slice(-6);
-		console.log("confirmando",name,number);
-		window.open("https://wa.me/+526629489379/?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20para%20la%20boda%20de%20Estefania%20y%20Leobardo%20para%20"+number+" personas. Mi nombre es "+name,"_blank");
+		console.log("confirmando",name,number,telefono);
+		var message= "Hola,";
+		var radioValue = $("input[name='confirm']:checked").val();
+            if(radioValue == "confirm"){
+				message+="%20quiero%20confirmar%20mi%20asistencia%20para%20la%20boda%20de%20Estefania%20y%20Leobardo%20para%20"+number+" personas. Mi nombre es "+name+".%20Télefono:"+telefono;
+            }else{
+				message+="%20lamentablemente%20no%20podré%20asistir%20a%20la%20boda%20de%20Estefania%20y%20Leobardo. Mi nombre es "+name+".%20Télefono:"+telefono;
+			}
+	
+		window.open("https://wa.me/+526629489379/?text="+ message,"_blank");
 		
 	
 	}
@@ -298,6 +307,8 @@
 		}
 		
 	}
+
+	$('#asistire').prop('checked',true);
 
 	// Document on load.
 	$(function(){

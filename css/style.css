@@ -1323,7 +1323,7 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-started .form-control {
   background: rgba(255, 255, 255, 0.2);
   border: none !important;
-  color: #fff;
+  color: #fff!important;
   font-size: 16px !important;
   width: 100%;
   padding-top: 20px;
@@ -1777,6 +1777,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 54px;
   font-size: 18px;
   font-weight: 300;
+  color: white!important;
 }
 .form-control:active, .form-control:focus {
   outline: none;
@@ -2103,4 +2104,10 @@ h1, h2, h3, h4, h5, h6 {
      width: 250px;
   }
 
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  accent-color: #0E6655;
 }
