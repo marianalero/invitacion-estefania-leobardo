@@ -308,7 +308,7 @@
 		
 	}
 
-	$('#asistire').prop('checked',true);
+	// $('#asistire').prop('checked',true);
 
 	// Document on load.
 	$(function(){
