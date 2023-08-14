@@ -2105,9 +2105,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 }
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   line-height: normal;
   accent-color: #0E6655;
+  -webkit-appearance: radio;
 }
